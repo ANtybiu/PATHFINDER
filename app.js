@@ -193,7 +193,7 @@ function pathfind(row,cell){
   Object.keys(surroundingCoords).forEach(blocks =>{
     let sR = surroundingCoords[blocks][0];
     let sC = surroundingCoords[blocks][1];
-  
+    if((sR<0 || sR>9)||(sC<0||sC>9)){surroundingCoords[blocks][5]}
   Object.keys(closedBlocks).forEach(block=>{
     if(sR === closedBlocks[block][0] && sC === closedBlocks[block][1]){surroundingCoords[blocks][5] = true;}
   })
